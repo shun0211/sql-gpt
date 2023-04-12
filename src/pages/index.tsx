@@ -19,7 +19,6 @@ const useStyles = createStyles((theme) => ({
       "url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: rem(700),
   },
 
   container: {
@@ -104,8 +103,8 @@ export default function Home() {
   const { classes } = useStyles();
 
   return (
-    <div className="min-h-screen">
-      <div className={classes.hero}>
+    <>
+      <div className={`${classes.hero} min-h-screen`}>
         <Overlay
           gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
           opacity={1}
@@ -150,6 +149,6 @@ export default function Home() {
           </form>
         </Container>
       </div>
-    </div>
+    </>
   );
 }
