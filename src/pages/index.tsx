@@ -120,7 +120,7 @@ export default function Home() {
           className="w-full"
             onSubmit={form.onSubmit((values) => {
               convertToBigQuerySql(buildPrompt(values.sqlStatememt)).then(
-                (res) => {
+                (res: any) => {
                   setConvertedSql(res.choices[0].text);
                 }
               );
